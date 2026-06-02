@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us | RK Consulting — Data & AI Consultancy</title>
-  <meta name="description" content="Get in touch with RK Consulting — specialist data, analytics and AI consultancy. We work with clients worldwide.">
+  <meta name="description" content="Get in touch with RK Consulting — specialist data, analytics and AI consultancy. We work with clients worldwide. Based in New Zealand.">
   <meta name="keywords" content="contact data analytics consultant, hire data consultant, AI consulting enquiry, RK Consulting contact">
   <meta property="og:title" content="Contact | RK Consulting">
   <meta property="og:description" content="Start a conversation with RK Consulting — specialist data, analytics and AI consultancy.">
@@ -12,6 +12,36 @@
   <link rel="canonical" href="https://www.rkconsulting.co.nz/contact">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="icon" type="image/png" href="../images/logo.png">
+  <style>
+    .form-success {
+      display: none;
+      background: #e6f9f0;
+      border: 1px solid #2ecc71;
+      border-radius: 10px;
+      padding: 1.5rem;
+      text-align: center;
+      color: #1a7a45;
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+    .form-success.show { display: block; }
+    .submit-btn {
+      width: 100%;
+      padding: 0.9rem;
+      background: var(--orange);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .submit-btn:hover { background: var(--orange-light); transform: translateY(-1px); }
+    .submit-btn:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+  </style>
 </head>
 <body>
 <div id="nav-placeholder"></div>
@@ -75,42 +105,66 @@
         </div>
       </div>
 
+      <!-- CONTACT FORM — sends to info@rkconsulting.co.nz via Formspree -->
       <div class="contact-form">
         <h3 style="font-family:'Sora',sans-serif;font-size:1.2rem;color:var(--navy);margin-bottom:1.5rem;">Send Us a Message</h3>
-        <div class="form-group">
-          <label>Your Name</label>
-          <input type="text" placeholder="Jane Smith">
-        </div>
-        <div class="form-group">
-          <label>Email Address</label>
-          <input type="email" placeholder="jane@company.com">
-        </div>
-        <div class="form-group">
-          <label>Organisation</label>
-          <input type="text" placeholder="Your company name">
-        </div>
-        <div class="form-group">
-          <label>What are you interested in?</label>
-          <select>
-            <option value="">Select a service...</option>
-            <option>AI Consulting</option>
-            <option>AI Automation</option>
-            <option>Power BI</option>
-            <option>Looker Studio</option>
-            <option>Airtable</option>
-            <option>Spreadsheets</option>
-            <option>Virtual Data Services</option>
-            <option>General Enquiry</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Tell us about your project</label>
-          <textarea placeholder="What problem are you trying to solve? What data or systems are involved? Any timeline or budget constraints?"></textarea>
-        </div>
-        <button onclick="handleSubmit(this)" style="width:100%;padding:0.9rem;background:var(--orange);color:white;border:none;border-radius:10px;font-family:'Sora',sans-serif;font-weight:700;font-size:1rem;cursor:pointer;transition:background 0.2s;">
-          Send Message &rarr;
-        </button>
-        <p style="font-size:0.8rem;color:var(--text-light);margin-top:1rem;text-align:center;">Or email us directly at <a href="mailto:info@rkconsulting.co.nz" style="color:var(--orange);">info@rkconsulting.co.nz</a></p>
+
+        <!--
+          SETUP INSTRUCTIONS (one-time, takes 2 minutes):
+          1. Go to https://formspree.io and sign up for a free account
+          2. Click "New Form", name it "RK Consulting Contact"
+          3. Copy your form ID (looks like: xpwzabcd)
+          4. Replace YOUR_FORMSPREE_ID below with your actual ID
+          5. That's it — submissions will land in info@rkconsulting.co.nz
+        -->
+        <form id="contact-form" action="https://formspree.io/f/xojbgjvy" method="POST" novalidate>
+
+          <!-- Hidden fields for Formspree routing -->
+          <input type="hidden" name="_replyto" value="">
+          <input type="hidden" name="_subject" value="New enquiry from RK Consulting website">
+          <input type="text" name="_gotcha" style="display:none">
+
+          <div class="form-group">
+            <label for="name">Your Name <span style="color:var(--orange)">*</span></label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address <span style="color:var(--orange)">*</span></label>
+            <input type="email" id="email" name="email" placeholder="jane@company.com" required>
+          </div>
+          <div class="form-group">
+            <label for="organisation">Organisation</label>
+            <input type="text" id="organisation" name="organisation" placeholder="Your company name">
+          </div>
+          <div class="form-group">
+            <label for="service">What are you interested in?</label>
+            <select id="service" name="service">
+              <option value="">Select a service...</option>
+              <option>AI Consulting</option>
+              <option>AI Automation</option>
+              <option>Power BI</option>
+              <option>Looker Studio</option>
+              <option>Airtable</option>
+              <option>Spreadsheets</option>
+              <option>Virtual Data Services</option>
+              <option>General Enquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell us about your project <span style="color:var(--orange)">*</span></label>
+            <textarea id="message" name="message" placeholder="Tell us about your challenge, idea, or where you need guidance — or simply reach out to start an initial chat with our team" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn" id="submit-btn">Send Message &rarr;</button>
+
+          <div class="form-success" id="form-success">
+            Message sent! We will be in touch soon.
+          </div>
+
+          <p style="font-size:0.8rem;color:var(--text-light);margin-top:1rem;text-align:center;">
+            Or email us directly at <a href="mailto:info@rkconsulting.co.nz" style="color:var(--orange);">info@rkconsulting.co.nz</a>
+          </p>
+        </form>
       </div>
     </div>
   </div>
@@ -120,15 +174,49 @@
 <script src="../js/shared.js"></script>
 <script>
 injectShared(false);
-function handleSubmit(btn) {
-  btn.textContent = 'Message Sent';
-  btn.style.background = '#2ecc71';
-  btn.disabled = true;
-  setTimeout(() => {
-    btn.textContent = 'Send Message \u2192';
-    btn.style.background = 'var(--orange)';
-    btn.disabled = false;
-  }, 3000);
+
+const form = document.getElementById('contact-form');
+const submitBtn = document.getElementById('submit-btn');
+const successMsg = document.getElementById('form-success');
+
+if (form) {
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    // Basic validation
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !message) {
+      alert('Please fill in your name, email and message before sending.');
+      return;
+    }
+
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        form.reset();
+        successMsg.classList.add('show');
+        submitBtn.textContent = 'Sent \u2713';
+        submitBtn.style.background = '#2ecc71';
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (err) {
+      submitBtn.textContent = 'Send Message \u2192';
+      submitBtn.disabled = false;
+      alert('There was an issue sending your message. Please email us directly at info@rkconsulting.co.nz');
+    }
+  });
 }
 </script>
 </body>
