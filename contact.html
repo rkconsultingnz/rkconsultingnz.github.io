@@ -1,50 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | RK Consulting — Data & AI Consultancy</title>
-  <meta name="description" content="Get in touch with RK Consulting — specialist data, analytics and AI consultancy. We work with clients worldwide. Based in New Zealand.">
-  <meta name="keywords" content="contact data analytics consultant, hire data consultant, AI consulting enquiry, RK Consulting contact">
-  <meta property="og:title" content="Contact | RK Consulting">
-  <meta property="og:description" content="Start a conversation with RK Consulting — specialist data, analytics and AI consultancy.">
-  <meta property="og:type" content="website">
-  <link rel="canonical" href="https://www.rkconsulting.co.nz/contact">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="icon" type="image/png" href="../images/logo.png">
-  <style>
-    .form-success {
-      display: none;
-      background: #e6f9f0;
-      border: 1px solid #2ecc71;
-      border-radius: 10px;
-      padding: 1.5rem;
-      text-align: center;
-      color: #1a7a45;
-      font-family: 'Sora', sans-serif;
-      font-weight: 600;
-      margin-top: 1rem;
-    }
-    .form-success.show { display: block; }
-    .submit-btn {
-      width: 100%;
-      padding: 0.9rem;
-      background: var(--orange);
-      color: white;
-      border: none;
-      border-radius: 10px;
-      font-family: 'Sora', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.2s;
-    }
-    .submit-btn:hover { background: var(--orange-light); transform: translateY(-1px); }
-    .submit-btn:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
-  </style>
-</head>
-<body>
-<div id="nav-placeholder"></div>
+---
+layout: default
+permalink: /contact/
+title: "Contact Us | RK Consulting — Data & AI Consultancy"
+description: "Get in touch with RK Consulting — specialist data, analytics and AI consultancy. We work with clients worldwide. Based in New Zealand."
+og_title: "Contact | RK Consulting"
+og_description: "Start a conversation with RK Consulting — specialist data, analytics and AI consultancy."
+og_image: /images/logo.png
+last_modified: 2026-08-24
+extra_head: contact-styles.html
+extra_js: /js/contact.js
+redirect_from:
+  - /pages/contact.html
+  - /contact-us
+---
 
 <div class="page-hero">
   <div class="page-hero-inner">
@@ -76,7 +44,7 @@
             </div>
             <div>
               <div class="contact-item-title">Phone</div>
-              <div class="contact-item-value"><a href="tel:+64210265957">+64 21 026 59597</a></div>
+              <div class="contact-item-value"><a href="tel:+642102659597">+64 21 026 59597</a></div>
             </div>
           </div>
           <div class="contact-item">
@@ -169,55 +137,3 @@
     </div>
   </div>
 </section>
-
-<div id="footer-placeholder"></div>
-<script src="../js/shared.js"></script>
-<script>
-injectShared(false);
-
-const form = document.getElementById('contact-form');
-const submitBtn = document.getElementById('submit-btn');
-const successMsg = document.getElementById('form-success');
-
-if (form) {
-  form.addEventListener('submit', async function(e) {
-    e.preventDefault();
-
-    // Basic validation
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-
-    if (!name || !email || !message) {
-      alert('Please fill in your name, email and message before sending.');
-      return;
-    }
-
-    submitBtn.textContent = 'Sending...';
-    submitBtn.disabled = true;
-
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (response.ok) {
-        form.reset();
-        successMsg.classList.add('show');
-        submitBtn.textContent = 'Sent \u2713';
-        submitBtn.style.background = '#2ecc71';
-      } else {
-        throw new Error('Form submission failed');
-      }
-    } catch (err) {
-      submitBtn.textContent = 'Send Message \u2192';
-      submitBtn.disabled = false;
-      alert('There was an issue sending your message. Please email us directly at info@rkconsulting.co.nz');
-    }
-  });
-}
-</script>
-</body>
-</html>

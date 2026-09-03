@@ -1,0 +1,20 @@
+# RK Consulting Limited
+
+> Auckland, New Zealand-based data, analytics and AI consultancy. Specialises in
+> Airtable operational systems, AI workflow automation, Power BI and Looker Studio
+> reporting for New Zealand SMEs, not-for-profits and public sector organisations.
+
+Contact: info@rkconsulting.co.nz | +64 21 026 59597 | Auckland, New Zealand
+
+## Services
+
+- [Airtable Consulting](https://www.rkconsulting.co.nz/airtable/): Base and table architecture, linked records, rollups and lookups, Interface Designer applications, automations and JavaScript scripting, integration with existing business systems.
+- [AI Automation](https://www.rkconsulting.co.nz/ai-automation/): LLM-powered business workflows — document and data extraction, intelligent email handling, review and feedback analysis, automated narrative reporting — built on Claude, GPT and Gemini APIs orchestrated through Zapier, Make and Google Apps Script.
+- [AI Consulting](https://www.rkconsulting.co.nz/ai-consulting/): AI opportunity discovery, phased roadmaps, proof-of-concept builds, responsible AI guidance, team upskilling and ongoing advisory. Tool-agnostic.
+- [Power BI](https://www.rkconsulting.co.nz/power-bi/): Semantic data modelling, DAX measures, Power Query transformations, dashboard design, row-level security and refresh configuration.
+- [Looker Studio](https://www.rkconsulting.co.nz/looker-studio/): Dashboard build and optimisation, BigQuery, GA4, Search Console and Google Ads connectors, blended data sources, calculated fields.
+- [Spreadsheets](https://www.rkconsulting.co.nz/spreadsheets/): Advanced Excel and Google Sheets modelling, automation and migration to more robust platforms.
+
+## Company
+
+- [Contact](https://www.rkconsulting.co.nz/contact/)

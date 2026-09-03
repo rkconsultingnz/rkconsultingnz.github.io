@@ -1,0 +1,21 @@
+title: RK Consulting
+url: https://www.rkconsulting.co.nz
+lang: en-NZ
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-redirect-from
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - PHASE-1-HANDOVER.md
+  - SEO-REFACTOR-BRIEF.md
+  - rkconsulting-seo-aio-audit.md
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

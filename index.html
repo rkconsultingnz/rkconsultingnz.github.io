@@ -1,37 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RK Consulting | Data, Analytics & AI Consultancy</title>
-  <meta name="description" content="RK Consulting is a specialist data, analytics and AI consultancy. We help businesses harness the power of Power BI, Looker Studio, Airtable, AI automation and more.">
-  <meta name="keywords" content="data analytics consultancy, AI consulting, Power BI consultant, Looker Studio, Airtable consultant, AI automation, business intelligence, data strategy, New Zealand data consultant">
-  <meta property="og:title" content="RK Consulting | Data, Analytics & AI Consultancy">
-  <meta property="og:description" content="Specialist data, analytics and AI consultancy. Power BI, Looker Studio, Airtable, AI strategy and automation.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.rkconsulting.co.nz">
-  <meta property="og:image" content="images/logo.png">
-  <link rel="canonical" href="https://www.rkconsulting.co.nz">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/png" href="images/logo.png">
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "RK Consulting Limited",
-    "description": "Specialist data, analytics and AI consultancy offering Power BI, Looker Studio, Airtable, AI consulting and AI automation services.",
-    "url": "https://www.rkconsulting.co.nz",
-    "email": "info@rkconsulting.co.nz",
-    "areaServed": "Worldwide",
-    "serviceType": ["Data Analytics", "Business Intelligence", "AI Consulting", "AI Automation", "Power BI", "Looker Studio", "Airtable"]
-  }
-  </script>
-</head>
-<body>
-
-<div id="nav-placeholder"></div>
+---
+layout: default
+permalink: /
+title: "RK Consulting | Data, Analytics & AI Consultancy"
+description: "RK Consulting is a specialist data, analytics and AI consultancy. We help businesses harness the power of Power BI, Looker Studio, Airtable, AI automation and more."
+og_title: "RK Consulting | Data, Analytics & AI Consultancy"
+og_description: "Specialist data, analytics and AI consultancy. Power BI, Looker Studio, Airtable, AI strategy and automation."
+og_image: /images/logo.png
+last_modified: 2026-08-24
+redirect_from:
+  - /home
+---
 
 <!-- ===== HERO ===== -->
 <section class="hero">
@@ -46,7 +24,7 @@
       <h1>Turn Data Into<br><span>Decisions.</span><br>AI Into <span>Advantage.</span></h1>
       <p>We help businesses unlock the full potential of their data — through expert analytics, intelligent dashboards, and AI solutions that create real, measurable results.</p>
       <div class="hero-actions">
-        <a href="pages/contact.html" class="btn-primary">Start a Conversation &rarr;</a>
+        <a href="{{ '/contact/' | relative_url }}" class="btn-primary">Start a Conversation &rarr;</a>
         <a href="#services" class="btn-secondary">Explore Services</a>
       </div>
     </div>
@@ -91,7 +69,7 @@
     </div>
     <div class="services-grid">
 
-      <a href="pages/ai-consulting.html" class="service-card">
+      <a href="{{ '/ai-consulting/' | relative_url }}" class="service-card">
         <div class="sc-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4v1h1a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-6a3 3 0 0 1 3-3h1V6a4 4 0 0 1 4-4z"/><circle cx="9" cy="13" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="13" r="1" fill="currentColor" stroke="none"/></svg>
         </div>
@@ -100,7 +78,7 @@
         <span class="sc-link">Learn more &rarr;</span>
       </a>
 
-      <a href="pages/ai-automation.html" class="service-card">
+      <a href="{{ '/ai-automation/' | relative_url }}" class="service-card">
         <div class="sc-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
         </div>
@@ -109,7 +87,7 @@
         <span class="sc-link">Learn more &rarr;</span>
       </a>
 
-      <a href="pages/power-bi.html" class="service-card">
+      <a href="{{ '/power-bi/' | relative_url }}" class="service-card">
         <div class="sc-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="4" height="18" rx="1"/><rect x="10" y="8" width="4" height="13" rx="1"/><rect x="17" y="5" width="4" height="16" rx="1"/></svg>
         </div>
@@ -118,7 +96,7 @@
         <span class="sc-link">Learn more &rarr;</span>
       </a>
 
-      <a href="pages/looker-studio.html" class="service-card">
+      <a href="{{ '/looker-studio/' | relative_url }}" class="service-card">
         <div class="sc-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
         </div>
@@ -127,7 +105,7 @@
         <span class="sc-link">Learn more &rarr;</span>
       </a>
 
-      <a href="pages/airtable.html" class="service-card">
+      <a href="{{ '/airtable/' | relative_url }}" class="service-card">
         <div class="sc-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
         </div>
@@ -136,7 +114,7 @@
         <span class="sc-link">Learn more &rarr;</span>
       </a>
 
-      <a href="pages/spreadsheets.html" class="service-card">
+      <a href="{{ '/spreadsheets/' | relative_url }}" class="service-card">
         <div class="sc-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg>
         </div>
@@ -200,9 +178,9 @@
         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,159,28,0.8)" stroke-width="1.5" style="margin:0 auto 1rem"><path d="M12 2a4 4 0 0 1 4 4v1h1a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-6a3 3 0 0 1 3-3h1V6a4 4 0 0 1 4-4z"/><circle cx="9" cy="13" r="1" fill="rgba(255,159,28,0.8)" stroke="none"/><circle cx="15" cy="13" r="1" fill="rgba(255,159,28,0.8)" stroke="none"/></svg>
         <h3>Ready to put AI to work?</h3>
         <p>Whether you are just starting your AI journey or looking to scale existing initiatives, we help you move fast and build right.</p>
-        <a href="pages/ai-consulting.html" class="btn-primary" style="margin-bottom:0.75rem;display:inline-flex;">Explore AI Consulting</a>
+        <a href="{{ '/ai-consulting/' | relative_url }}" class="btn-primary" style="margin-bottom:0.75rem;display:inline-flex;">Explore AI Consulting</a>
         <br>
-        <a href="pages/ai-automation.html" class="btn-secondary" style="margin-top:0.75rem;display:inline-flex;color:white;border-color:rgba(255,255,255,0.3);">See AI Automation</a>
+        <a href="{{ '/ai-automation/' | relative_url }}" class="btn-secondary" style="margin-top:0.75rem;display:inline-flex;color:white;border-color:rgba(255,255,255,0.3);">See AI Automation</a>
       </div>
     </div>
   </div>
@@ -246,12 +224,6 @@
   <div class="section-inner">
     <h2>Ready to unlock the power of your data?</h2>
     <p>Let us talk about your challenges and build something that moves the needle.</p>
-    <a href="pages/contact.html" class="btn-white">Get in Touch &rarr;</a>
+    <a href="{{ '/contact/' | relative_url }}" class="btn-white">Get in Touch &rarr;</a>
   </div>
 </section>
-
-<div id="footer-placeholder"></div>
-<script src="js/shared.js"></script>
-<script>injectShared(true);</script>
-</body>
-</html>

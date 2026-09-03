@@ -1,0 +1,30 @@
+<style>
+    .form-success {
+      display: none;
+      background: #e6f9f0;
+      border: 1px solid #2ecc71;
+      border-radius: 10px;
+      padding: 1.5rem;
+      text-align: center;
+      color: #1a7a45;
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+    .form-success.show { display: block; }
+    .submit-btn {
+      width: 100%;
+      padding: 0.9rem;
+      background: var(--orange);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .submit-btn:hover { background: var(--orange-light); transform: translateY(-1px); }
+    .submit-btn:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+  </style>

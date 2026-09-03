@@ -1,0 +1,23 @@
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+
+  <!-- Canonical is derived from the page permalink, so it can never point at a URL that does not exist. -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <meta property="og:site_name" content="RK Consulting">
+  <meta property="og:locale" content="en_NZ">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page.og_title | default: page.title }}">
+  <meta property="og:description" content="{{ page.og_description | default: page.description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ page.og_image | default: '/images/logo.png' | absolute_url }}">
+
+{% if site.noindex %}  <meta name="robots" content="noindex, nofollow">
+{% endif %}
+  <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
+  <link rel="icon" type="image/png" href="{{ '/images/logo.png' | relative_url }}">
+{% if page.extra_head %}  {% include {{ page.extra_head }} %}
+{% endif %}

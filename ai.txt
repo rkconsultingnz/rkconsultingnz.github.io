@@ -1,0 +1,3 @@
+User-agent: *
+Allow: *
+Contact: info@rkconsulting.co.nz
