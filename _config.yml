@@ -13,6 +13,7 @@ exclude:
   - PHASE-1-HANDOVER.md
   - SEO-REFACTOR-BRIEF.md
   - rkconsulting-seo-aio-audit.md
+  - verify.sh
 
 defaults:
   - scope:
