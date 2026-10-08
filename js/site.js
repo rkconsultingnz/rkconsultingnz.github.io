@@ -72,9 +72,6 @@ function initNav() {
       hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
     };
     hamburger.addEventListener('click', (e) => { e.stopPropagation(); toggleMenu(); });
-    hamburger.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMenu(); }
-    });
     document.addEventListener('click', (e) => {
       if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
         navLinks.classList.remove('open');

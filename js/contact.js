@@ -27,6 +27,8 @@ if (form) {
       });
 
       if (response.ok) {
+        // GA4 conversion: lets Analytics attribute enquiries to their source (search, LinkedIn, AI assistants).
+        if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_id: 'contact-form' });
         form.reset();
         successMsg.classList.add('show');
         submitBtn.textContent = 'Sent \u2713';

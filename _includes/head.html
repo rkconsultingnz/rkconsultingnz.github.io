@@ -23,11 +23,26 @@
   <meta property="og:title" content="{{ page.og_title | default: page.title }}">
   <meta property="og:description" content="{{ page.og_description | default: page.description }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
-  <meta property="og:image" content="{{ page.og_image | default: '/images/logo.png' | absolute_url }}">
+  <meta property="og:image" content="{{ page.og_image | default: '/images/og-default.jpg' | absolute_url }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="RK Consulting — Auckland data, analytics and AI consultancy">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.og_title | default: page.title }}">
+  <meta name="twitter:description" content="{{ page.og_description | default: page.description }}">
+  <meta name="twitter:image" content="{{ page.og_image | default: '/images/og-default.jpg' | absolute_url }}">
 
 {% if site.noindex %}  <meta name="robots" content="noindex, nofollow">
-{% endif %}
-  <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
-  <link rel="icon" type="image/png" href="{{ '/images/logo.png' | relative_url }}">
+{% else %}  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+{% endif %}  <meta name="author" content="Rahul Khatri">
+  <meta name="theme-color" content="#1B3A4B">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="32x32">
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ '/images/icon-192.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/images/apple-touch-icon.png' | relative_url }}">
+  <link rel="alternate" type="text/plain" title="LLM summary" href="{{ '/llms.txt' | relative_url }}">
 {% if page.extra_head %}  {% include {{ page.extra_head }} %}
 {% endif %}

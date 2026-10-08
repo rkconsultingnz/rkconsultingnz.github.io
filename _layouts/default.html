@@ -2,7 +2,8 @@
 <html lang="en-NZ">
 <head>
 {% include head.html %}
-{% if page.url == "/" %}{% include schema-org.html %}{% endif %}
+{% include schema-org.html %}
+{% unless page.sitemap == false %}{% include schema-page.html %}{% endunless %}
 </head>
 <body>
 
@@ -14,8 +15,8 @@
 
 {% include footer.html %}
 
-<script src="{{ '/js/site.js' | relative_url }}"></script>
-{% if page.extra_js %}<script src="{{ page.extra_js | relative_url }}"></script>
+<script src="{{ '/js/site.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+{% if page.extra_js %}<script src="{{ page.extra_js | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 {% endif %}
 </body>
 </html>

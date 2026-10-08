@@ -1,0 +1,32 @@
+# Tells Bing (and other IndexNow search engines) about the site's pages after each deploy to main.
+# Bing's index feeds ChatGPT search and Microsoft Copilot, so this speeds up AI discovery of changes.
+# The key is public by design: IndexNow verifies ownership by fetching /<key>.txt from the site.
+name: IndexNow ping
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    env:
+      HOST: www.rkconsulting.co.nz
+      KEY: cd1a3fe097c0379cfc6ec68227c8e448
+    steps:
+      - name: Wait for GitHub Pages to deploy
+        run: sleep 150
+
+      - name: Submit sitemap URLs to IndexNow
+        run: |
+          urls=$(curl -fsSL "https://$HOST/sitemap.xml" | grep -oP '(?<=<loc>)[^<]+' | jq -R . | jq -sc .)
+          echo "Submitting: $urls"
+          body=$(jq -nc --arg host "$HOST" --arg key "$KEY" --argjson urls "$urls" \
+            '{host: $host, key: $key, keyLocation: ("https://" + $host + "/" + $key + ".txt"), urlList: $urls}')
+          code=$(curl -s -o response.txt -w '%{http_code}' -X POST https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json; charset=utf-8' -d "$body")
+          cat response.txt; echo
+          echo "IndexNow HTTP $code"
+          # 200 = accepted, 202 = accepted (key validation pending)
+          [ "$code" = "200" ] || [ "$code" = "202" ]
