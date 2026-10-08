@@ -1,22 +1,106 @@
+  <!-- Site-wide entity graph: who RK Consulting is. Every page-level node points back to these @ids. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "RK Consulting Limited",
-    "description": "Auckland-based data, analytics and AI consultancy specialising in Airtable operational systems, AI workflow automation, Power BI and Looker Studio reporting.",
-    "url": "https://www.rkconsulting.co.nz/",
-    "logo": "https://www.rkconsulting.co.nz/images/logo.png",
-    "email": "info@rkconsulting.co.nz",
-    "telephone": "+64-21-026-59597",
-    "address": {
-      "@type": "PostalAddress",
-      "addressRegion": "Auckland",
-      "addressCountry": "NZ"
-    },
-    "areaServed": [
-      { "@type": "City", "name": "Auckland" },
-      { "@type": "Country", "name": "New Zealand" }
-    ],
-    "serviceType": ["Data Analytics", "Business Intelligence", "AI Consulting", "AI Automation", "Power BI", "Looker Studio", "Airtable"]
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.rkconsulting.co.nz/#organization",
+        "name": "RK Consulting",
+        "legalName": "RK Consulting Limited",
+        "alternateName": ["RK Consulting NZ", "RK Consulting Auckland"],
+        "description": "Auckland-based data, analytics and AI consultancy. RK Consulting builds Airtable operational systems, Power BI and Looker Studio reporting, and AI workflow automation for organisations in New Zealand, Australia and the Pacific, with experience across telco, healthcare, FMCG, dairy, events management and aviation.",
+        "slogan": "Turn Data Into Decisions. AI Into Advantage.",
+        "url": "https://www.rkconsulting.co.nz/",
+        "logo": {
+          "@type": "ImageObject",
+          "@id": "https://www.rkconsulting.co.nz/#logo",
+          "url": "https://www.rkconsulting.co.nz/images/logo.png",
+          "width": 401,
+          "height": 118,
+          "caption": "RK Consulting"
+        },
+        "image": "https://www.rkconsulting.co.nz/images/og-default.jpg",
+        "email": "info@rkconsulting.co.nz",
+        "telephone": "+64-21-026-59597",
+        "foundingDate": "2021",
+        "founder": { "@id": "https://www.rkconsulting.co.nz/#founder" },
+        "identifier": [
+          { "@type": "PropertyValue", "propertyID": "NZBN", "value": "9429049253061" },
+          { "@type": "PropertyValue", "propertyID": "NZ Company Number", "value": "8180378" }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Auckland",
+          "addressRegion": "Auckland",
+          "addressCountry": "NZ"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": -36.8485, "longitude": 174.7633 },
+        "areaServed": [
+          { "@type": "City", "name": "Auckland" },
+          { "@type": "Country", "name": "New Zealand" },
+          { "@type": "Country", "name": "Australia" },
+          { "@type": "Place", "name": "Pacific Islands" }
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "email": "info@rkconsulting.co.nz",
+          "telephone": "+64-21-026-59597",
+          "areaServed": ["NZ", "AU"],
+          "availableLanguage": "en"
+        },
+        "knowsAbout": [
+          "Airtable", "Microsoft Power BI", "DAX", "Power Query", "Looker Studio", "BigQuery",
+          "Google Analytics 4", "Google Apps Script", "Microsoft Excel", "Google Sheets",
+          "Workflow automation", "Zapier", "Make", "Large language models", "Claude API",
+          "OpenAI API", "Gemini API", "Generative AI strategy", "Business intelligence"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Data, analytics and AI consulting services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@id": "https://www.rkconsulting.co.nz/airtable/#service" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://www.rkconsulting.co.nz/ai-automation/#service" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://www.rkconsulting.co.nz/ai-consulting/#service" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://www.rkconsulting.co.nz/power-bi/#service" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://www.rkconsulting.co.nz/looker-studio/#service" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://www.rkconsulting.co.nz/spreadsheets/#service" } }
+          ]
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/rkconsultingnz",
+          "https://app.companiesoffice.govt.nz/co/8180378",
+          "https://www.nzbn.govt.nz/mynzbn/nzbndetails/9429049253061/"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.rkconsulting.co.nz/#founder",
+        "name": "Rahul Khatri",
+        "jobTitle": "Founder & Principal Data and AI Consultant",
+        "worksFor": { "@id": "https://www.rkconsulting.co.nz/#organization" },
+        "homeLocation": { "@type": "City", "name": "Auckland" },
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Google Cloud Certified Generative AI Leader",
+          "credentialCategory": "certification",
+          "recognizedBy": { "@type": "Organization", "name": "Google Cloud" }
+        },
+        "knowsAbout": ["Airtable", "Power BI", "Looker Studio", "AI automation", "Generative AI", "Data analytics"],
+        "sameAs": [
+          "https://www.linkedin.com/in/rahulkhatri1/",
+          "https://www.unicornfactory.nz/freelancers/rahul-khatri"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.rkconsulting.co.nz/#website",
+        "url": "https://www.rkconsulting.co.nz/",
+        "name": "RK Consulting",
+        "inLanguage": "en-NZ",
+        "publisher": { "@id": "https://www.rkconsulting.co.nz/#organization" }
+      }
+    ]
   }
   </script>

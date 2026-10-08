@@ -1,0 +1,21 @@
+---
+layout: null
+permalink: /llms-full.txt
+sitemap: false
+---
+# RK Consulting Limited: full site text
+
+> The complete text of every page on www.rkconsulting.co.nz, generated from the site source on each
+> deploy, for AI assistants and LLM-based tools. The summary version is at /llms.txt.
+
+Founder: Rahul Khatri · Auckland, New Zealand · info@rkconsulting.co.nz · +64 21 026 59597
+{% assign order = "/,/airtable/,/power-bi/,/looker-studio/,/spreadsheets/,/ai-consulting/,/ai-automation/,/contact/" | split: "," %}
+{% for u in order %}{% assign p = site.pages | where: "url", u | first %}{% if p %}
+---
+
+## {{ p.title }}
+
+URL: {{ p.url | absolute_url }}
+
+{% assign text = p.content | replace: "<br>", " " | strip_html | replace: "&amp;", "&" | replace: "&rarr;", "→" | replace: "&mdash;", "—" | replace: "&copy;", "©" | newline_to_br | split: "<br />" %}{% for line in text %}{% assign l = line | strip %}{% if l != "" and l != "Learn more →" %}{{ l }}
+{% endif %}{% endfor %}{% endif %}{% endfor %}
