@@ -9,7 +9,7 @@ sitemap: false
 > deploy, for AI assistants and LLM-based tools. The summary version is at /llms.txt.
 
 Founder: Rahul Khatri · Auckland, New Zealand · info@rkconsulting.co.nz · +64 21 026 59597
-{% assign order = "/,/airtable/,/power-bi/,/looker-studio/,/spreadsheets/,/ai-consulting/,/ai-automation/,/contact/" | split: "," %}
+{% assign order = "/,/about/,/airtable/,/power-bi/,/looker-studio/,/spreadsheets/,/ai-consulting/,/ai-automation/,/contact/" | split: "," %}
 {% for u in order %}{% assign p = site.pages | where: "url", u | first %}{% if p %}
 ---
 
