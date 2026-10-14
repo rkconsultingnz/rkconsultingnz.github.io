@@ -175,12 +175,12 @@ nav.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.25); }
 
 .nav-cta {
   background: var(--orange) !important;
-  color: var(--white) !important;
+  color: var(--navy-dark) !important;
   padding: 0.55rem 1.25rem !important;
   border-radius: 8px !important;
   font-weight: 600 !important;
 }
-.nav-cta:hover { background: var(--orange-light) !important; color: var(--white) !important; }
+.nav-cta:hover { background: var(--orange-light) !important; color: var(--navy-dark) !important; }
 
 .hamburger {
   display: none;
@@ -288,7 +288,7 @@ nav.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.25); }
   align-items: center;
   gap: 0.5rem;
   background: var(--orange);
-  color: var(--white);
+  color: var(--navy-dark);
   font-family: 'Sora', sans-serif;
   font-weight: 600;
   font-size: 0.95rem;
@@ -330,64 +330,37 @@ nav.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.25); }
   justify-content: center;
 }
 
-.hero-cards-stack {
+/* Homepage hero scene: a dashboard (BI) with floating Airtable and AI cards. Decorative. */
+.hero-scene {
   position: relative;
   width: 100%;
-  max-width: 420px;
+  max-width: 470px;
+  margin: 2rem 0;
 }
-
-.h-card {
-  background: rgba(255,255,255,0.06);
+.hs-main, .hs-card {
+  background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: var(--radius-lg);
-  padding: 1.5rem;
   backdrop-filter: blur(10px);
-  animation: float 6s ease-in-out infinite;
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 24px 48px rgba(0,0,0,0.35);
 }
-.h-card:nth-child(2) {
+.hs-main svg, .hs-card svg { display: block; width: 100%; height: auto; }
+.hs-card {
   position: absolute;
-  top: -40px; right: -30px;
-  width: 220px;
-  animation-delay: -2s;
+  background: rgba(22,48,66,0.82);
+  animation: float 7s ease-in-out infinite;
 }
-.h-card:nth-child(3) {
-  position: absolute;
-  bottom: -30px; left: -20px;
-  width: 200px;
-  animation-delay: -4s;
-}
-
-.h-card-icon {
-  margin-bottom: 0.75rem;
-  color: var(--orange);
-}
-.h-card-title {
-  font-family: 'Sora', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 0.25rem;
-}
-.h-card-sub {
-  font-size: 0.75rem;
-  color: rgba(255,255,255,0.5);
-}
-.h-card-bar {
-  margin-top: 0.75rem;
-  height: 4px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 2px;
-  overflow: hidden;
-}
-.h-card-bar-fill {
-  height: 100%;
-  background: var(--orange);
-  border-radius: 2px;
+.hs-card--top { width: 48%; top: -78px; right: -32px; }
+.hs-card--bottom { width: 48%; bottom: -40px; left: -40px; animation-delay: -3.5s; }
+.hs-main { animation: float 9s ease-in-out infinite; animation-delay: -1.5s; }
+@media (prefers-reduced-motion: reduce) {
+  .hs-main, .hs-card { animation: none; }
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
+  50% { transform: translateY(-8px); }
 }
 
 /* ===== SECTION SHARED ===== */
@@ -760,6 +733,17 @@ footer {
   margin-bottom: 1rem;
 }
 .page-hero h1 span { color: var(--orange); }
+.page-hero-inner.has-visual {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 460px);
+  gap: 3rem;
+  align-items: center;
+}
+.page-hero-visual svg { display: block; width: 100%; height: auto; filter: drop-shadow(0 24px 48px rgba(0,0,0,0.35)); }
+@media (max-width: 1000px) {
+  .page-hero-inner.has-visual { grid-template-columns: 1fr; }
+  .page-hero-visual { display: none; }
+}
 .page-hero p {
   font-size: 1.1rem;
   color: rgba(255,255,255,0.7);
@@ -787,7 +771,7 @@ footer {
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
   margin-top: 2px;
-  color: white;
+  color: var(--navy-dark);
   font-size: 0.7rem;
 }
 
@@ -993,7 +977,7 @@ footer {
   background: var(--orange);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  color: var(--white);
+  color: var(--navy-dark);
   font-family: 'Sora', sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
@@ -1173,7 +1157,7 @@ footer {
 }
 .cta-banner h2 {
   font-size: clamp(1.6rem, 3vw, 2.4rem);
-  color: var(--white);
+  color: var(--navy-dark);
   margin-bottom: 0.75rem;
 }
 .cta-banner p { color: var(--navy); margin-bottom: 2rem; font-size: 1.05rem; font-weight: 500; }
@@ -1182,7 +1166,7 @@ footer {
   align-items: center;
   gap: 0.5rem;
   background: var(--white);
-  color: var(--orange);
+  color: var(--navy-dark);
   font-family: 'Sora', sans-serif;
   font-weight: 700;
   font-size: 0.95rem;

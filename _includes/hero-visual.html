@@ -1,0 +1,2 @@
+{% if page.hero_visual %}{% capture hero_svg %}hero-visuals/{{ page.hero_visual }}.svg{% endcapture %}
+    <div class="page-hero-visual" aria-hidden="true">{% include {{ hero_svg }} %}</div>{% endif %}

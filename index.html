@@ -28,32 +28,11 @@ redirect_from:
         <a href="#services" class="btn-secondary">Explore Services</a>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="hero-cards-stack">
-        <div class="h-card">
-          <div class="h-card-icon">
-            <svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="4" height="18" rx="1"/><rect x="10" y="8" width="4" height="13" rx="1"/><rect x="17" y="5" width="4" height="16" rx="1"/></svg>
-          </div>
-          <div class="h-card-title">BI Dashboards</div>
-          <div class="h-card-sub">Power BI · Looker Studio</div>
-          <div class="h-card-bar"><div class="h-card-bar-fill" style="width:78%"></div></div>
-        </div>
-        <div class="h-card">
-          <div class="h-card-icon">
-            <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a4 4 0 0 1 4 4v1h1a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-6a3 3 0 0 1 3-3h1V6a4 4 0 0 1 4-4z"/><circle cx="9" cy="13" r="1" fill="currentColor"/><circle cx="15" cy="13" r="1" fill="currentColor"/></svg>
-          </div>
-          <div class="h-card-title">AI Automation</div>
-          <div class="h-card-sub">Workflows deployed</div>
-          <div class="h-card-bar"><div class="h-card-bar-fill" style="width:92%"></div></div>
-        </div>
-        <div class="h-card">
-          <div class="h-card-icon">
-            <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-          </div>
-          <div class="h-card-title">Airtable Systems</div>
-          <div class="h-card-sub">Operational bases built</div>
-          <div class="h-card-bar"><div class="h-card-bar-fill" style="width:85%"></div></div>
-        </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-scene">
+        <div class="hs-main">{% include hero-visuals/home-dashboard.svg %}</div>
+        <div class="hs-card hs-card--top">{% include hero-visuals/home-card-airtable.svg %}</div>
+        <div class="hs-card hs-card--bottom">{% include hero-visuals/home-card-ai.svg %}</div>
       </div>
     </div>
   </div>

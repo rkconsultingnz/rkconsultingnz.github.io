@@ -40,15 +40,19 @@ faq:
   - q: Can different people see different data in the same report?
     a: Yes. Row-level security means each person sees only the data they're permitted to, from one shared report.
 related: [looker-studio, spreadsheets, ai-consulting]
+hero_visual: power-bi
 ---
 
 <div class="page-hero">
-  <div class="page-hero-inner">
-    {% include breadcrumb.html %}
-    <div class="section-label">Service</div>
-    <h1>Microsoft <span>Power BI</span> Consulting</h1>
-    <p>Enterprise-grade dashboards and reporting built on the world's leading business intelligence platform. Turn your data into decisions — fast, beautiful, and always current.</p>
-    <a href="{{ '/contact/' | relative_url }}" class="btn-primary">Discuss Your Project &rarr;</a>
+  <div class="page-hero-inner has-visual">
+    <div class="page-hero-text">
+      {% include breadcrumb.html %}
+      <div class="section-label">Service</div>
+      <h1>Microsoft <span>Power BI</span> Consulting</h1>
+      <p>Enterprise-grade dashboards and reporting built on the world's leading business intelligence platform. Turn your data into decisions — fast, beautiful, and always current.</p>
+      <a href="{{ '/contact/' | relative_url }}" class="btn-primary">Discuss Your Project &rarr;</a>
+    </div>
+    {% include hero-visual.html %}
   </div>
 </div>
 
