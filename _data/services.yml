@@ -31,3 +31,7 @@ data-ai-partner:
   name: Data & AI Partner
   url: /data-ai-partner/
   summary: Your part-time data & AI team for ongoing reporting, systems, AI tools and advice.
+app-development:
+  name: App Development
+  url: /app-development/
+  summary: Custom booking systems, portals, operations apps and AI-powered products.
