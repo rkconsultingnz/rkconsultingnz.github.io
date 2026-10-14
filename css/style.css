@@ -878,33 +878,43 @@ footer {
 .breadcrumb [aria-current="page"] { color: rgba(255,255,255,0.55); }
 
 /* ===== SERVICE PAGE: AT A GLANCE ===== */
-.glance-section { padding: 56px 2rem 0; }
-.glance-title {
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--orange);
-  margin-bottom: 1rem;
-}
+.glance-section { background: var(--off-white); padding: 80px 2rem; }
+.glance-section .section-header { margin-bottom: 2.5rem; }
 .glance {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  border: 1px solid var(--grey-100);
-  border-radius: var(--radius);
-  background: var(--off-white);
-  overflow: hidden;
+  gap: 1.25rem;
 }
-.glance-item { padding: 1.25rem 1.5rem; border-right: 1px solid var(--grey-100); }
-.glance-item:last-child { border-right: 0; }
+.glance-card {
+  background: var(--white);
+  border: 1px solid var(--grey-100);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+.glance-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  border-color: rgba(255,159,28,0.3);
+}
+.glance-icon {
+  width: 48px; height: 48px;
+  background: var(--orange-dim);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--orange);
+  margin-bottom: 1.1rem;
+}
 .glance dt {
   font-family: 'Sora', sans-serif;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--navy);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.4rem;
 }
-.glance dd { margin: 0; font-size: 0.875rem; color: var(--text-light); line-height: 1.6; }
+.glance dd { margin: 0; font-size: 0.875rem; color: var(--text-light); line-height: 1.65; }
 
 /* ===== SERVICE PAGE: FAQ ===== */
 .faq-section { background: var(--off-white); }
@@ -960,17 +970,13 @@ footer {
 
 @media (max-width: 900px) {
   .glance { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .glance-item:nth-child(2n) { border-right: 0; }
-  .glance-item:nth-child(-n+2) { border-bottom: 1px solid var(--grey-100); }
   .related-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
-  .glance-section { padding: 40px 1.5rem 0; }
+  .glance-section { padding: 64px 1.5rem; }
 }
 @media (max-width: 560px) {
   .glance { grid-template-columns: 1fr; }
-  .glance-item { border-right: 0; border-bottom: 1px solid var(--grey-100); }
-  .glance-item:last-child { border-bottom: 0; }
 }
 
 /* ===== TWO COL ===== */
