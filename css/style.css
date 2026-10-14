@@ -979,6 +979,73 @@ footer {
   .glance { grid-template-columns: 1fr; }
 }
 
+/* ===== SHARED CONTENT BLOCKS (Phase 3c) ===== */
+.tinted-section { background: var(--off-white); }
+.body-copy { color: var(--text-light); line-height: 1.75; margin-bottom: 1.25rem; }
+.panel {
+  background: var(--off-white);
+  border: 1px solid var(--grey-100);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+}
+.panel-title { font-size: 1.15rem; margin-bottom: 1.5rem; }
+.steps { list-style: none; display: grid; gap: 1.25rem; }
+.steps li { display: flex; gap: 1rem; align-items: flex-start; }
+.step-num {
+  width: 28px; height: 28px;
+  background: var(--orange);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--white);
+  font-family: 'Sora', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.steps strong { display: block; font-family: 'Sora', sans-serif; font-size: 0.9rem; color: var(--navy); margin-bottom: 0.2rem; }
+.steps span:not(.step-num) { font-size: 0.875rem; color: var(--text-light); line-height: 1.6; }
+
+/* How We Work: process and engagement models */
+.process {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+.process-step {
+  background: var(--white);
+  border: 1px solid var(--grey-100);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+.process-num {
+  display: block;
+  font-family: 'Sora', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--orange);
+  opacity: 0.35;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+.process-step h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+.process-step p { font-size: 0.9rem; color: var(--text-light); line-height: 1.65; }
+.engage-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+.engage-card {
+  background: var(--white);
+  border: 1px solid var(--grey-100);
+  border-top: 3px solid var(--orange);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+.engage-card h3 { font-size: 1.1rem; margin-bottom: 0.6rem; }
+.engage-card p { font-size: 0.9rem; color: var(--text-light); line-height: 1.65; }
+.principles .why-title { margin-bottom: 0.5rem; }
+@media (max-width: 900px) {
+  .process, .engage-grid { grid-template-columns: 1fr; }
+  .panel { padding: 1.75rem; }
+}
+
 /* ===== TWO COL ===== */
 .two-col {
   display: grid;
