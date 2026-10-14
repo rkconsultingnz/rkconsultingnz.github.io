@@ -1,0 +1,32 @@
+{% if page.faq %}
+<section class="faq-section" aria-labelledby="faq-heading">
+  <div class="section-inner">
+    <div class="section-header center">
+      <div class="section-label">FAQs</div>
+      <h2 id="faq-heading" class="section-title">{{ page.breadcrumb }} <span>Questions</span></h2>
+    </div>
+    <div class="faq-list">
+      {% assign all_faq = page.faq | concat: site.data.faq_common %}{% for f in all_faq %}<details class="faq-item">
+        <summary><h3>{{ f.q }}</h3></summary>
+        <p>{{ f.a }}</p>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+{% if page.related %}
+<section class="related-section" aria-labelledby="related-heading">
+  <div class="section-inner">
+    <h2 id="related-heading" class="related-title">Related services</h2>
+    <div class="related-grid">
+      {% for key in page.related %}{% assign s = site.data.services[key] %}<a class="related-card" href="{{ s.url | relative_url }}">
+        <span class="related-name">{{ s.name }} &rarr;</span>
+        <span class="related-summary">{{ s.summary }}</span>
+      </a>
+      {% endfor %}
+    </div>
+    {% if page.case_study %}<p class="related-case">See it in practice: <a href="{{ page.case_study.url }}" rel="noopener" target="_blank">{{ page.case_study.title }} &rarr;</a></p>{% endif %}
+  </div>
+</section>
+{% endif %}

@@ -5,7 +5,7 @@ title: "AI Consultant Auckland | AI Strategy & PoC | RK Consulting"
 description: "Practical AI consulting in Auckland: use-case discovery, roadmaps, proof-of-concepts, responsible AI governance and team training. Tool-agnostic."
 og_title: "AI Consulting | RK Consulting"
 og_description: "Strategic AI advisory — identify, prioritise and implement high-value AI initiatives responsibly and at pace."
-last_modified_at: 2026-10-08
+last_modified_at: 2026-10-14
 redirect_from:
   - /pages/ai-consulting.html
 breadcrumb: AI Consulting
@@ -22,10 +22,30 @@ service:
     - Responsible AI guidance
     - AI team upskilling and training
     - Ongoing AI advisory
+glance:
+  - label: Who it's for
+    value: Leaders and teams who want to adopt AI responsibly and get measurable value from it
+  - label: What you get
+    value: AI opportunity discovery, phased roadmaps, proof-of-concept builds, responsible AI guidance, team training and ongoing advisory
+  - label: Works with
+    value: Claude, GPT, Gemini, Microsoft Copilot, Azure OpenAI and AWS Bedrock (tool-agnostic)
+  - label: Where
+    value: Auckland-based; working across New Zealand, Australia and the Pacific, on-site or remote
+faq:
+  - q: Where should our organisation start with AI?
+    a: Start with a business problem, not a tool. Our AI opportunity discovery workshops identify your highest-value use cases, scored by effort and impact, and turn them into a phased, practical roadmap.
+  - q: Is it safe to use ChatGPT, Claude or Gemini with business data?
+    a: It can be, with the right setup. Business and API versions of these tools offer stronger data protections than free consumer apps. We help you choose suitable tools, set clear usage policies and keep sensitive information protected, in line with the NZ Privacy Act 2020.
+  - q: Do you recommend a particular AI vendor?
+    a: No. We're tool-agnostic and choose the model that fits your use case, data and budget, whether that's Claude, GPT, Gemini, Copilot or another option.
+  - q: Can you train our team to use AI?
+    a: Yes. We run practical AI literacy workshops, from prompt engineering for business teams to hands-on LLM integration for technical staff.
+related: [ai-automation, airtable, power-bi]
 ---
 
 <div class="page-hero">
   <div class="page-hero-inner">
+    {% include breadcrumb.html %}
     <div class="section-label">Service</div>
     <h1><span>AI Consulting</span> &amp; Strategy</h1>
     <p>Strategic AI advisory that cuts through the hype. We help organisations identify, prioritise and implement high-value AI initiatives — responsibly, pragmatically, and at pace.</p>
@@ -33,13 +53,15 @@ service:
   </div>
 </div>
 
+{% include at-a-glance.html %}
+
 <section>
   <div class="section-inner">
     <div class="two-col">
       <div>
         <div class="section-label">Our Approach</div>
         <h2 class="section-title">AI That Creates <span>Real Value</span></h2>
-        <p style="color:var(--text-light);margin-bottom:1.5rem;line-height:1.75;">The AI landscape is moving fast. Knowing where to invest and what to build — versus what to buy or wait on — is half the battle. As Google Cloud Certified Generative AI Leaders, we bring hands-on experience building AI solutions across data analytics, business operations and healthcare.</p>
+        <p style="color:var(--text-light);margin-bottom:1.5rem;line-height:1.75;">The AI landscape is moving fast. Knowing where to invest and what to build — versus what to buy or wait on — is half the battle. Led by a Google Cloud Certified Generative AI Leader, we bring hands-on experience building AI solutions across data analytics, business operations and healthcare.</p>
         <p style="color:var(--text-light);margin-bottom:1.5rem;line-height:1.75;">We do not sell AI for its own sake. We start with your business problems and work backwards to identify where AI genuinely accelerates value — and where it does not.</p>
         <div class="feature-list">
           <div class="feature-item"><div class="feature-check">&#10003;</div><span>AI readiness assessment and opportunity discovery</span></div>
@@ -56,7 +78,7 @@ service:
           <h3 style="font-family:'Sora',sans-serif;color:white;margin-bottom:0.5rem;">Proven AI Experience</h3>
           <p style="color:var(--orange);font-size:0.85rem;font-weight:600;margin-bottom:1rem;font-family:'Sora',sans-serif;">Google Cloud Certified Generative AI Leader</p>
           <p style="color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.7;margin-bottom:1rem;">We bring hands-on experience delivering AI solutions in production environments across multiple sectors.</p>
-          <p style="color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.7;">Our team remains closely connected to the evolving AI landscape, engaging with industry events, communities, and technology platforms to stay at the forefront of innovation.</p>
+          <p style="color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.7;">We stay closely connected to the evolving AI landscape, engaging with industry events, communities, and technology platforms to stay at the forefront of innovation.</p>
         </div>
       </div>
     </div>
@@ -208,6 +230,8 @@ service:
     </div>
   </div>
 </section>
+
+{% include service-faq.html %}
 
 <section class="cta-banner">
   <div class="section-inner">

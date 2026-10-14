@@ -5,7 +5,7 @@ title: "Airtable Consultant Auckland, NZ | RK Consulting"
 description: "Auckland Airtable consultant. Bases, Interface Designer apps, automations, scripting and integrations with Xero, Outlook and Slack that replace spreadsheets."
 og_title: "Airtable Consulting | RK Consulting"
 og_description: "Custom Airtable databases, automations and workflows that replace spreadsheet chaos with scalable operational systems."
-last_modified_at: 2026-10-08
+last_modified_at: 2026-10-14
 redirect_from:
   - /pages/airtable.html
 breadcrumb: Airtable Consulting
@@ -25,17 +25,42 @@ service:
     - Airtable integration via Zapier and Make
     - Airtable QA and testing
     - Airtable training and knowledge transfer
+glance:
+  - label: Who it's for
+    value: Businesses and teams outgrowing spreadsheets and manual processes
+  - label: What you get
+    value: Base and table design, Interface Designer apps, automations and scripting, integrations, testing and training
+  - label: Works with
+    value: Outlook, Slack, Salesforce, Xero, Zapier, Make and hundreds of other tools
+  - label: Where
+    value: Auckland-based; working across New Zealand, Australia and the Pacific, on-site or remote
+faq:
+  - q: Can Airtable replace our spreadsheets?
+    a: Often, yes. Airtable combines the familiarity of a spreadsheet with the power of a relational database, so it suits work that several people update, records that link together (clients, projects, events, assets), and processes that need approvals or automated notifications. Spreadsheets are still the better tool for one-off modelling and heavy calculations, and we'll tell you honestly which fits.
+  - q: Does Airtable integrate with Xero, Outlook and Slack?
+    a: Yes. We connect Airtable to Outlook, Slack, Salesforce, Xero and hundreds of other tools using Zapier, Make or custom scripts, so data flows between systems without re-keying.
+  - q: Can you improve an Airtable base we already have?
+    a: Yes. We review and restructure existing bases, tidying tables and fields, fixing linked records, adding automations and building Interface Designer views, without losing your data.
+  - q: Will our team be able to manage it after handover?
+    a: Yes. Every build includes documentation and tailored training so your team can run and evolve the system with confidence.
+related: [ai-automation, spreadsheets, power-bi]
+case_study:
+  title: "Case study: Airtable workforce and accreditation platform for a large events company"
+  url: https://www.unicornfactory.nz/case-studies/event-management-platform-airtable-solution
 ---
 
 <!-- PAGE HERO -->
 <div class="page-hero">
   <div class="page-hero-inner">
+    {% include breadcrumb.html %}
     <div class="section-label">Service</div>
     <h1>Airtable <span>Consulting</span></h1>
     <p>Transform spreadsheet chaos into elegant, scalable operational systems. We design, build and automate Airtable solutions that grow with your business.</p>
     <a href="{{ '/contact/' | relative_url }}" class="btn-primary">Discuss Your Project &rarr;</a>
   </div>
 </div>
+
+{% include at-a-glance.html %}
 
 <!-- INTRO TWO-COL -->
 <section>
@@ -45,7 +70,7 @@ service:
         <div class="section-label">What We Build</div>
         <h2 class="section-title">Airtable as Your <span>Operational Hub</span></h2>
         <p style="color:var(--text-light);margin-bottom:1.5rem;line-height:1.75;">Airtable is far more than a database — it is a platform for building powerful operational workflows. We specialise in architecting solutions that replace disconnected spreadsheets and manual processes with structured, automated, and beautifully designed systems.</p>
-        <p style="color:var(--text-light);line-height:1.75;">Lacking the skills or time to set up and manage this powerful platform? Our team of Airtable specialists are ready to help you get the most from it — whether you are starting from scratch or need to level up an existing base.</p>
+        <p style="color:var(--text-light);line-height:1.75;">Lacking the skills or time to set up and manage this powerful platform? We're ready to help you get the most from it — whether you are starting from scratch or need to level up an existing base.</p>
       </div>
       <div>
         <div style="background:var(--off-white);border-radius:var(--radius-lg);padding:2.5rem;border:1px solid var(--grey-100);">
@@ -189,6 +214,8 @@ service:
     </div>
   </div>
 </section>
+
+{% include service-faq.html %}
 
 <section class="cta-banner">
   <div class="section-inner">

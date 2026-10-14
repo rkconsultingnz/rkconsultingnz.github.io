@@ -1,0 +1,14 @@
+{% if page.glance %}
+<section class="glance-section" aria-labelledby="glance-heading">
+  <div class="section-inner">
+    <h2 id="glance-heading" class="glance-title">{{ page.breadcrumb }} at a glance</h2>
+    <dl class="glance">
+      {% for item in page.glance %}<div class="glance-item">
+        <dt>{{ item.label }}</dt>
+        <dd>{{ item.value }}</dd>
+      </div>
+      {% endfor %}
+    </dl>
+  </div>
+</section>
+{% endif %}

@@ -5,7 +5,7 @@ title: "Power BI Consultant Auckland, NZ | RK Consulting"
 description: "Power BI consultant in Auckland: star-schema data models, DAX, row-level security and executive dashboards for New Zealand organisations."
 og_title: "Power BI Consulting | RK Consulting"
 og_description: "Enterprise-grade Power BI dashboards and reporting built on the world's leading BI platform. Turn your data into decisions."
-last_modified_at: 2026-10-08
+last_modified_at: 2026-10-14
 redirect_from:
   - /pages/power-bi.html
 breadcrumb: Power BI Consulting
@@ -23,16 +23,41 @@ service:
     - Excel, SSRS and Tableau to Power BI migration
     - Power BI row-level security and governance
     - AI-powered insights with Azure OpenAI and Copilot
+glance:
+  - label: Who it's for
+    value: Leadership, finance and operations teams that need trusted, up-to-date reporting
+  - label: What you get
+    value: Executive dashboards, financial reporting, data models, report migration, row-level security and governance
+  - label: Works with
+    value: Excel, SQL databases, finance systems, SSRS and Tableau (for migration), Azure OpenAI and Microsoft Copilot
+  - label: Where
+    value: Auckland-based; working across New Zealand, Australia and the Pacific, on-site or remote
+faq:
+  - q: Power BI or Looker Studio, which should we use?
+    a: Power BI suits organisations on Microsoft 365 that need complex calculations, robust data models and row-level security. Looker Studio suits businesses that run on Google Workspace, especially for marketing and web reporting, and has no licence cost. We'll recommend the right fit for your data, team and budget.
+  - q: Can you migrate our Excel, SSRS or Tableau reports to Power BI?
+    a: Yes. We rebuild legacy reports in Power BI on a clean, documented data model, so they're faster, more reliable and easier to maintain.
+  - q: Can people ask questions of the data in plain English?
+    a: Yes. We integrate Azure OpenAI and Microsoft Copilot so stakeholders can ask questions in plain English and see AI-generated summaries directly in their reports.
+  - q: Can different people see different data in the same report?
+    a: Yes. Row-level security means each person sees only the data they're permitted to, from one shared report.
+related: [looker-studio, spreadsheets, ai-consulting]
+case_study:
+  title: "Case study: Executive Power BI dashboard for government infrastructure projects"
+  url: https://www.unicornfactory.nz/case-studies/executive-power-bi-dashboard-for-government-infrastructure-projects
 ---
 
 <div class="page-hero">
   <div class="page-hero-inner">
+    {% include breadcrumb.html %}
     <div class="section-label">Service</div>
     <h1>Microsoft <span>Power BI</span> Consulting</h1>
     <p>Enterprise-grade dashboards and reporting built on the world's leading business intelligence platform. Turn your data into decisions — fast, beautiful, and always current.</p>
     <a href="{{ '/contact/' | relative_url }}" class="btn-primary">Discuss Your Project &rarr;</a>
   </div>
 </div>
+
+{% include at-a-glance.html %}
 
 <section>
   <div class="section-inner">
@@ -127,6 +152,8 @@ service:
     </div>
   </div>
 </section>
+
+{% include service-faq.html %}
 
 <section class="cta-banner">
   <div class="section-inner">

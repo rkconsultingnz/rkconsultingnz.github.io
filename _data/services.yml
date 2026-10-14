@@ -1,0 +1,25 @@
+# Short service summaries, used for "Related services" links on each service page.
+airtable:
+  name: Airtable Consulting
+  url: /airtable/
+  summary: Custom Airtable databases, automations and workflows that replace spreadsheet chaos.
+power-bi:
+  name: Power BI Consulting
+  url: /power-bi/
+  summary: Executive dashboards, financial reporting and data models built on Microsoft Power BI.
+looker-studio:
+  name: Looker Studio Consulting
+  url: /looker-studio/
+  summary: Connected Google Looker Studio dashboards for marketing, operations and leadership.
+spreadsheets:
+  name: Spreadsheet Consulting
+  url: /spreadsheets/
+  summary: Advanced Excel and Google Sheets models, dashboards and Apps Script automation.
+ai-consulting:
+  name: AI Consulting
+  url: /ai-consulting/
+  summary: AI opportunity discovery, roadmaps, proof-of-concepts and responsible AI guidance.
+ai-automation:
+  name: AI Automation
+  url: /ai-automation/
+  summary: LLM-powered workflows that remove manual, judgement-heavy work.

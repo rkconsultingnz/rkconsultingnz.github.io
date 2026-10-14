@@ -5,7 +5,7 @@ title: "Looker Studio Consultant NZ | GA4 & BigQuery | RK Consulting"
 description: "Looker Studio dashboards for NZ businesses: GA4, Google Ads, Search Console, BigQuery and Sheets, blended and automated with Apps Script. Auckland-based."
 og_title: "Looker Studio Consulting | RK Consulting"
 og_description: "Cloud-native, connected Looker Studio dashboards that bring all your data sources together in one shareable view."
-last_modified_at: 2026-10-08
+last_modified_at: 2026-10-14
 redirect_from:
   - /pages/looker-studio.html
 breadcrumb: Looker Studio Consulting
@@ -23,16 +23,38 @@ service:
     - Google Apps Script automated data pipelines
     - GA4, Google Ads and Search Console marketing dashboards
     - Looker Studio template frameworks
+glance:
+  - label: Who it's for
+    value: Businesses that run on Google Workspace, and marketing, operations and leadership teams
+  - label: What you get
+    value: Dashboard design and build, data source integration, calculated fields, automated data pipelines and reusable templates
+  - label: Works with
+    value: Google Sheets, BigQuery, GA4, Google Ads, Search Console and Google Apps Script
+  - label: Where
+    value: Auckland-based; working across New Zealand, Australia and the Pacific, on-site or remote
+faq:
+  - q: Is Looker Studio free?
+    a: Looker Studio itself has no licence cost, which makes it a cost-effective choice for many businesses. Some third-party data connectors and the Looker Studio Pro edition are paid, and we'll flag any costs upfront.
+  - q: Can Looker Studio combine GA4, Google Ads and Search Console data?
+    a: Yes. We blend GA4, Google Ads, Search Console and other sources into a single marketing performance dashboard your team can act on.
+  - q: Will our dashboards update automatically?
+    a: Yes. Native Google connectors refresh automatically, and we build Google Apps Script pipelines that pull, transform and load data into Sheets on a schedule to keep your dashboards current.
+  - q: Looker Studio or Power BI, which is better for us?
+    a: If your team works in Google Workspace and wants fast, shareable dashboards without licence costs, Looker Studio is usually the better fit. If you're on Microsoft 365 or need advanced data modelling and row-level security, Power BI may suit you better. We'll help you choose.
+related: [power-bi, spreadsheets, ai-automation]
 ---
 
 <div class="page-hero">
   <div class="page-hero-inner">
+    {% include breadcrumb.html %}
     <div class="section-label">Service</div>
     <h1>Google <span>Looker Studio</span> Consulting</h1>
     <p>Cloud-native, connected dashboards that bring together all your data sources into one beautiful, shareable view. Zero licence cost, maximum impact.</p>
     <a href="{{ '/contact/' | relative_url }}" class="btn-primary">Discuss Your Project &rarr;</a>
   </div>
 </div>
+
+{% include at-a-glance.html %}
 
 <section>
   <div class="section-inner">
@@ -127,6 +149,8 @@ service:
     </div>
   </div>
 </section>
+
+{% include service-faq.html %}
 
 <section class="cta-banner">
   <div class="section-inner">
