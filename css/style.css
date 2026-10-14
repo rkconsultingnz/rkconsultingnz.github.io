@@ -970,6 +970,9 @@ footer {
   padding: 2.5rem;
 }
 .panel-title { font-size: 1.15rem; margin-bottom: 1.5rem; }
+.panel--light { background: var(--white); }
+.process-step p a { color: var(--navy); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.process-step p a:hover { color: var(--orange); }
 .steps { list-style: none; display: grid; gap: 1.25rem; }
 .steps li { display: flex; gap: 1rem; align-items: flex-start; }
 .step-num {
