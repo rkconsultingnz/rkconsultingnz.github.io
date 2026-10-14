@@ -1011,6 +1011,7 @@ footer {
 }
 .process-step h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
 .process-step p { font-size: 0.9rem; color: var(--text-light); line-height: 1.65; }
+.process--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .engage-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
 .engage-card {
   background: var(--white);
@@ -1021,9 +1022,12 @@ footer {
 }
 .engage-card h3 { font-size: 1.1rem; margin-bottom: 0.6rem; }
 .engage-card p { font-size: 0.9rem; color: var(--text-light); line-height: 1.65; }
+.engage-card .engage-link { margin-top: 0.75rem; }
+.engage-link a, .why-desc a { color: var(--navy); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.engage-link a:hover, .why-desc a:hover { color: var(--orange); }
 .principles .why-title { margin-bottom: 0.5rem; }
 @media (max-width: 900px) {
-  .process, .engage-grid { grid-template-columns: 1fr; }
+  .process, .process--4, .engage-grid { grid-template-columns: 1fr; }
   .panel { padding: 1.75rem; }
 }
 

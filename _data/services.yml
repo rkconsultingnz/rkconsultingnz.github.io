@@ -27,3 +27,7 @@ ai-automation:
   name: AI Automation
   url: /ai-automation/
   summary: LLM-powered workflows that remove manual, judgement-heavy work.
+data-ai-partner:
+  name: Data & AI Partner
+  url: /data-ai-partner/
+  summary: Your part-time data & AI team for ongoing reporting, systems, AI tools and advice.
