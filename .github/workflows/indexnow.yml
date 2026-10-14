@@ -11,16 +11,26 @@ on:
 jobs:
   ping:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     env:
       HOST: www.rkconsulting.co.nz
       KEY: cd1a3fe097c0379cfc6ec68227c8e448
     steps:
-      - name: Wait for GitHub Pages to deploy
-        run: sleep 150
+      # Every page carries <meta name="build-revision" content="<commit sha>">. Wait until the live
+      # homepage shows this commit, so a slow GitHub Pages deploy can't make us submit an old sitemap.
+      - name: Wait for this commit to be live
+        run: |
+          for i in $(seq 1 60); do
+            if curl -fsSL "https://$HOST/?indexnow=$GITHUB_SHA-$i" | grep -q "content=\"$GITHUB_SHA\""; then
+              echo "Live after ~$((i * 15)) seconds"; exit 0
+            fi
+            sleep 15
+          done
+          echo "::warning::Commit $GITHUB_SHA not seen on the live site after 15 minutes; submitting the current sitemap anyway."
 
       - name: Submit sitemap URLs to IndexNow
         run: |
-          urls=$(curl -fsSL "https://$HOST/sitemap.xml" | grep -oP '(?<=<loc>)[^<]+' | jq -R . | jq -sc .)
+          urls=$(curl -fsSL "https://$HOST/sitemap.xml?indexnow=$GITHUB_SHA" | grep -oP '(?<=<loc>)[^<]+' | jq -R . | jq -sc .)
           echo "Submitting: $urls"
           body=$(jq -nc --arg host "$HOST" --arg key "$KEY" --argjson urls "$urls" \
             '{host: $host, key: $key, keyLocation: ("https://" + $host + "/" + $key + ".txt"), urlList: $urls}')

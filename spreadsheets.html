@@ -5,7 +5,7 @@ title: "Excel & Google Sheets Consultant NZ | RK Consulting"
 description: "Excel & Google Sheets consultant in NZ: forecasting models, dashboards, Apps Script automation and AI (Claude/GPT) inside your spreadsheets. Auckland-based."
 og_title: "Spreadsheet Consulting | RK Consulting"
 og_description: "Advanced Excel and Google Sheets solutions — formulas, dashboards, automation and AI-powered analytics."
-last_modified_at: 2026-10-08
+last_modified_at: 2026-10-14
 redirect_from:
   - /pages/spreadsheets.html
 breadcrumb: Spreadsheet Consulting
@@ -23,16 +23,38 @@ service:
     - Spreadsheet template design
     - Spreadsheet system integration
     - AI-powered spreadsheet analysis
+glance:
+  - label: Who it's for
+    value: Finance, operations and planning teams that rely on Excel or Google Sheets
+  - label: What you get
+    value: Forecasting models, reporting dashboards, Apps Script automation, templates, integrations and AI-powered analysis
+  - label: Works with
+    value: Microsoft Excel, Google Sheets, Google Apps Script, Airtable, Looker Studio, and the Claude and GPT APIs
+  - label: Where
+    value: Auckland-based; working across New Zealand, Australia and the Pacific, on-site or remote
+faq:
+  - q: Can you fix or improve a spreadsheet we already use?
+    a: Yes. We restructure existing workbooks for accuracy and maintainability, and add data validation and protection so they're hard to break.
+  - q: Can Google Sheets be automated?
+    a: Yes. Google Apps Script can pull data from APIs, send emails, update records and generate reports on a schedule, with no manual effort from your team.
+  - q: Can AI be used inside Google Sheets?
+    a: Yes. We connect the Claude or GPT APIs to Google Sheets through Apps Script for sentiment scoring, classification, survey analysis and intelligent summaries at scale.
+  - q: When should we move from spreadsheets to Airtable or Power BI?
+    a: It's usually time when several people edit the same data, records need to link together, or monthly reporting takes hours to prepare. We'll help you decide, and migrate when it makes sense.
+related: [airtable, power-bi, ai-automation]
 ---
 
 <div class="page-hero">
   <div class="page-hero-inner">
+    {% include breadcrumb.html %}
     <div class="section-label">Service</div>
     <h1>Spreadsheets, <span>Supercharged</span></h1>
     <p>In a world of modern data platforms, spreadsheets remain the quiet workhorses of business. We make yours work smarter — with advanced formulas, beautiful dashboards and full automation.</p>
     <a href="{{ '/contact/' | relative_url }}" class="btn-primary">Discuss Your Project &rarr;</a>
   </div>
 </div>
+
+{% include at-a-glance.html %}
 
 <section>
   <div class="section-inner">
@@ -67,7 +89,7 @@ service:
     <div class="section-header center">
       <div class="section-label">Our Expertise</div>
       <h2 class="section-title">Spreadsheet <span>Consultancy Services</span></h2>
-      <p class="section-desc">We deliver Excel and Google Sheets solutions that are built to last — documented, maintainable and designed for your team to use with confidence.</p>
+      <p class="section-desc">We deliver Excel and Google Sheets solutions that are built to last — well-structured, maintainable and designed for your team to use with confidence.</p>
     </div>
     <div class="consultancy-grid">
       <div class="consultancy-card">
@@ -127,6 +149,8 @@ service:
     </div>
   </div>
 </section>
+
+{% include service-faq.html %}
 
 <section class="cta-banner">
   <div class="section-inner">
