@@ -11,7 +11,7 @@
 - Founder and principal consultant: Rahul Khatri, Google Cloud Certified Generative AI Leader, 15+ years in data and analytics
 - Based in Auckland, New Zealand; works with clients across New Zealand, Australia and the Pacific
 - Industry experience: telco, healthcare, FMCG, dairy, events management, aviation, government infrastructure
-- Engagements: fixed-price projects, time and materials, and an ongoing Virtual Data Partner service (a part-time data & AI team)
+- Engagements: fixed-price projects, time and materials, and an ongoing Data & AI Partner service (a part-time data & AI team)
 - Contact: info@rkconsulting.co.nz · +64 21 026 59597 · https://www.rkconsulting.co.nz/contact/ (replies within 1 business day)
 
 ## Services
@@ -23,7 +23,7 @@
 - [Power BI](https://www.rkconsulting.co.nz/power-bi/): Executive dashboards, financial reporting, star and snowflake schema data modelling, migration from Excel, SSRS and Tableau, row-level security and governance, Azure OpenAI and Copilot integration.
 - [Looker Studio](https://www.rkconsulting.co.nz/looker-studio/): Dashboard design and build; Google Sheets, BigQuery, GA4, Google Ads and Search Console integration; calculated fields; Apps Script data pipelines; marketing analytics; reusable templates.
 - [Spreadsheets](https://www.rkconsulting.co.nz/spreadsheets/): Advanced Excel and Google Sheets forecasting models, dashboards, Apps Script automation, templates, system integration and AI-powered analysis inside Sheets.
-- [Virtual Data Partner](https://www.rkconsulting.co.nz/virtual-data-partner/): A part-time data & AI team for organisations without a full-time data hire, teams needing extra specialist capacity, and clients wanting new systems looked after. Ongoing dashboard and reporting support, Airtable, spreadsheet and automation upkeep, ad-hoc analysis and advice, and AI and data strategy.
+- [Data & AI Partner](https://www.rkconsulting.co.nz/data-ai-partner/): A part-time data & AI team for organisations without full-time data and AI skills, teams needing extra specialist capacity, and clients wanting new systems or AI tools looked after. Ongoing dashboard and reporting support; Airtable, spreadsheet and automation upkeep; AI-powered workflows and tools built, run and improved over time; ad-hoc analysis and advice; AI and data strategy; training.
 
 ## Proof of work
 
