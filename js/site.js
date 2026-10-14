@@ -31,23 +31,42 @@ function initDropdown() {
     if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
   }
 
-  dropdown.addEventListener('mouseenter', openMenu);
-  dropdown.addEventListener('mouseleave', scheduleClose);
-  menu.addEventListener('mouseenter', cancelClose);
-  menu.addEventListener('mouseleave', scheduleClose);
+  // Hover-to-open only on devices with a real mouse. On touch screens a tap fires emulated
+  // mouseenter + click together, which would open and immediately close the menu.
+  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)');
+  const ifHover = (fn) => () => { if (canHover.matches) fn(); };
+  dropdown.addEventListener('mouseenter', ifHover(openMenu));
+  dropdown.addEventListener('mouseleave', ifHover(scheduleClose));
+  menu.addEventListener('mouseenter', ifHover(cancelClose));
+  menu.addEventListener('mouseleave', ifHover(scheduleClose));
+
+  // With a mouse, hovering already opens the menu, so a click on "Services" must never close it
+  // (people naturally hover and then click). Touch screens and keyboard (Enter/Space, detail === 0)
+  // still toggle it open and closed.
+  function closeNow() {
+    cancelClose();
+    menu.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    if (chevron) chevron.style.transform = '';
+  }
 
   toggle.addEventListener('click', (e) => {
     e.preventDefault();
     e.stopPropagation();
-    if (menu.classList.contains('open')) { scheduleClose(); } else { openMenu(); }
+    const isOpen = menu.classList.contains('open');
+    if (!isOpen) { openMenu(); return; }
+    if (e.detail === 0 || !canHover.matches) closeNow();
+  });
+
+  dropdown.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menu.classList.contains('open')) {
+      closeNow();
+      toggle.focus();
+    }
   });
 
   document.addEventListener('click', (e) => {
-    if (!dropdown.contains(e.target)) {
-      menu.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-      if (chevron) chevron.style.transform = '';
-    }
+    if (!dropdown.contains(e.target)) closeNow();
   });
 
   menu.querySelectorAll('a').forEach(link => {

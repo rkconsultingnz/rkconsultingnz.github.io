@@ -698,6 +698,8 @@ footer {
   transition: color var(--transition);
 }
 .footer-col a:hover { color: var(--orange); }
+.footer-col a.footer-social { display: inline-flex; margin-top: 0.35rem; color: rgba(255,255,255,0.7); }
+.footer-col a.footer-social:hover { color: var(--orange); }
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.08);
   padding-top: 1.5rem;
@@ -1209,6 +1211,11 @@ footer {
     box-shadow: var(--shadow-lg);
     gap: 0.25rem;
     align-items: flex-start;
+    /* Long menus (all services expanded) scroll inside the panel instead of running off-screen */
+    max-height: calc(100vh - 88px);
+    max-height: calc(100dvh - 88px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
   }
   .dropdown-menu {
     position: static;
