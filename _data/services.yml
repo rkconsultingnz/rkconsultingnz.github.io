@@ -3,6 +3,10 @@ airtable:
   name: Airtable Consulting
   url: /airtable/
   summary: Custom Airtable databases, automations and workflows that replace spreadsheet chaos.
+airtable-ai-automation:
+  name: Airtable + AI Automation
+  url: /airtable-ai-automation/
+  summary: AI that reads, sorts, summarises and drafts inside your Airtable base.
 power-bi:
   name: Power BI Consulting
   url: /power-bi/

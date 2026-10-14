@@ -3,7 +3,7 @@
   <div class="section-inner">
     <div class="section-header center">
       <div class="section-label">FAQs</div>
-      <h2 id="faq-heading" class="section-title">{{ page.breadcrumb }} <span>Questions</span></h2>
+      <h2 id="faq-heading" class="section-title">{% if page.faq_title %}{{ page.faq_title }}{% else %}{{ page.breadcrumb }} <span>Questions</span>{% endif %}</h2>
     </div>
     <div class="faq-list">
       {% assign all_faq = page.faq | concat: site.data.faq_common %}{% for f in all_faq %}<details class="faq-item">
