@@ -882,7 +882,7 @@ footer {
 .glance-section .section-header { margin-bottom: 2.5rem; }
 .glance {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
 }
 .glance-card {
@@ -969,14 +969,11 @@ footer {
 .related-case a:hover { color: var(--orange); }
 
 @media (max-width: 900px) {
-  .glance { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .glance { grid-template-columns: 1fr; }
   .related-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
   .glance-section { padding: 64px 1.5rem; }
-}
-@media (max-width: 560px) {
-  .glance { grid-template-columns: 1fr; }
 }
 
 /* ===== SHARED CONTENT BLOCKS (Phase 3c) ===== */
