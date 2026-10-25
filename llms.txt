@@ -34,6 +34,7 @@
 
 ## Company
 
+- [Home](https://www.rkconsulting.co.nz/): overview of RK Consulting's services, industries and approach
 - [About Rahul Khatri, founder](https://www.rkconsulting.co.nz/about/): 15+ years in data and AI; Google Cloud Certified Generative AI Leader; lectures in business intelligence and Generative AI and mentors emerging data professionals
 - [How we work](https://www.rkconsulting.co.nz/how-we-work/): free first conversation, discovery and scoping, clear proposal, staged delivery, testing, training and optional ongoing support
 - [Contact](https://www.rkconsulting.co.nz/contact/)

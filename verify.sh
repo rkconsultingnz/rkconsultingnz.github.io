@@ -14,7 +14,9 @@
 # ---------------------------------------------------------------------------
 BASE="${1:-https://www.rkconsulting.co.nz}"
 PATHS=("/" "/airtable/" "/power-bi/" "/looker-studio/" "/spreadsheets/" \
-       "/ai-consulting/" "/ai-automation/" "/contact/")
+       "/ai-consulting/" "/ai-automation/" "/airtable-ai-automation/" \
+       "/app-development/" "/data-ai-partner/" "/how-we-work/" "/about/" \
+       "/contact/" "/privacy/")
 FAIL=0
 echo "Checking $BASE"
 echo
