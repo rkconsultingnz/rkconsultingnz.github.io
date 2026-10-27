@@ -11,6 +11,7 @@
 - Founder and principal consultant: Rahul Khatri, Google Cloud Certified Generative AI Leader, 15+ years in data and analytics
 - Based in Auckland, New Zealand; works with clients across New Zealand, Australia and the Pacific
 - Industry experience: telco, healthcare, FMCG, dairy, events management, aviation, government infrastructure
+- Partnerships: Skyvia implementation and consulting partner (https://skyvia.com/partners/rk-consulting) for data integration, Airtable sync and backups, and loading data into BigQuery or SQL for dashboards
 - Engagements: fixed-price projects, time and materials, and an ongoing Data & AI Partner service (a part-time data & AI team)
 - Contact: info@rkconsulting.co.nz · +64 21 026 59597 · https://www.rkconsulting.co.nz/contact/ (replies within 1 business day)
 
