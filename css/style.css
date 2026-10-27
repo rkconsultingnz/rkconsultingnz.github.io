@@ -830,6 +830,7 @@ footer {
   margin-bottom: 0.5rem;
 }
 .about-fact dd { margin: 0; color: var(--navy); font-weight: 500; line-height: 1.55; }
+.about-fact dd a { color: inherit; text-decoration: underline; text-decoration-color: var(--orange); text-underline-offset: 3px; }
 .about-links {
   display: flex;
   flex-wrap: wrap;
